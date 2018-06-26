@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>GDI Introduction to R Slides</title>
+
+		<meta name="description" content="Girl Develop It Introduction to R class">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="dist/css/reveal.css">
+		<link rel="stylesheet" href="dist/css/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor --><link rel="stylesheet" href="dist/css/light.css">
+		<!-- dark editor <link rel="stylesheet" href="dist/css/dark.css">-->
+		<!-- <link rel="stylesheet" href="dist/css/zenburn.css"> -->
+
+		<link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link rel="stylesheet" href="dist/css/print/pdf.css" type="text/css" media="print">
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+		<script src="dist/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+		<!-- Opening -->
+				<section>
+					<img src="dist/img/circle-gdi-logo.png" alt="GDI Logo" class="noborder"/>
+					<h1>GDI Introduction to R and RStudio</h1>
+					<h2>Class 1</h2>
+				</section>
+		<!-- Welcome-->
+				<section>
+					<h3>Welcome!</h3>
+					<div class = "left-align">
+						<p><b>Girl Develop It</b> is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p><br>
+						<h4>Some "rules"</h4>
+						<ul>
+							<li>We are here for you!</li>
+							<li>Every question is important.</li>
+							<li>Help each other.</li>
+							<li>Have fun.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+				  <h2>Welcome!</h2>
+					<div class = "left-align">
+					  <h4>Tell us about yourself.</h4>
+					  <ul>
+						<li>Who are you?</li>
+						<li>What do you hope to get out of the class?</li>
+						<!-- Feel free to change the icebreaker question! -->
+						<li>What's your favorite ice cream flavor?</li>
+					  </ul>
+					</div>
+				</section>
+				<!-- Class goals -->
+				<section>
+					<h2>Goals for this class</h2>
+					<img src="https://png.icons8.com/color/200/000000/iceberg.png">
+					<p>Gain foundation to get started</p>
+					<img src="https://png.icons8.com/color/200/000000/technology-lifestyle.png">
+					<p>Collaborate</p>
+					<img src="https://png.icons8.com/color/200/000000/clapperboard.png">
+					<p>Learn by doing</p>
+				</section>
+
+				<!-- What is R -->
+				<section>
+					<h2>What is R?</h2>
+					<img src="https://www.r-project.org/logo/Rlogo.svg">
+					<br>
+					<p>Open-source programming language used across industries more commonly to work with data.<br></p>
+				</section>
+				<section>
+					<h2>What is R?</h2>
+					<p>"Open source...</p>
+					<div>
+						<ul>
+							<li>Large and growing community:</li>
+								<ul>
+									<li>Sharing packages</li>
+									<li>Exchanging code</li>
+									<li>Answering questions</li>
+								</ul>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>What is R?</h2>
+					<p>"...programming language.."</p>
+					<div class="left-align">
+						<ul>
+							<li>Based on the S language</li>
+							<li>No point-and-click interface</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>What is R?</h2>
+					<p>"...used across industries.."</p>
+					<div class="left-align">
+						<ul>
+							<li>Academia</li>
+							<li>Nonprofit organizations</li>
+							<li>IT Companies</li>
+							<li>Analytics and consulting companies</li>
+							<li>Financial institutions</li>
+							<li>Others...</li>
+						</ul>
+						<img src="img/companies-using-r.png" alt="collage of company logos">
+						<p><small>Photo credit: <a href="https://www.listendata.com/2016/12/companies-using-r.html">Deepanshu Bhalia</a></small></p>
+					</div>
+				</section>
+				<section>
+					<h2>What is R?</h2>
+					<p>"...more commonly..."</p>
+					<div class="left-align">
+						<ul>
+							<li>Versatile programming language </li>
+							<li>Founders are scientist</li>
+							<li>Robust support for data work</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>What is R?</h2>
+					<p>"...work with data..."</p>
+					<div class="left-align">
+						<ul>
+							<li>Statistical analysis </li>
+							<li>Data visualization</li>
+							<p><small>Photo credit: <a href="#" target="_blank">icon8 </a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>What is RStudio</h2>
+					<div>
+						<p>Integrated development environment (IDE) for R</p>
+						<a href="https://www.rstudio.com/about/" target="_blank" alt="RStudio homepage link"><img src="img/rstudio-300x260.png"></a>
+						<p><small>Photo credit: <a href="https://www.rstudio.com/">RStudio</a></small></p>
+						<p><a href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf" target="_blank">RStudio IDE Cheat Sheet</a></p>
+					</div>
+				</section>
+				<section>
+					<h2>What can I do with R?</h2>
+					<div class="left-align">
+						<p></p>
+						<ul>
+							<li>Statistical analysis </li>
+							<li>Data visualization</li>
+							<p><small>Photo credit: <a href="#" target="_blank">icon8 </a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Resources</h2>
+					<div class="left-align">
+						<h4>Free online moocs</h4>
+						<ul>
+							<li><a href="https://www.udacity.com/course/data-analysis-with-r--ud651">Data Analysis with R by Facebook</a></li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Resources</h2>
+					<div class="left-align">
+						<h4>Short and free tutorial</h4>
+						<ul>
+							<li><a href="https://www.listendata.com/p/r-programming-tutorials.html">Listen Data's 100 Free Tutorials For Learning R</a></li>
+						</ul>
+					</div>
+				</section>
+
+
+
+
+
+			</div>
+		<footer>
+		<div class="copyright">
+		  Introduction to R -- NYC Chapter --
+		  <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+		</div>
+	  </footer>
+		</div>
+
+
+		<script src="dist/js/head.min.js"></script>
+		<script src="dist/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'dist/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
