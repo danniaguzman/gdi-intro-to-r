@@ -1,0 +1,255 @@
+---
+title: "Homework"
+output: html_notebook
+---
+
+For this homework you'll have an opportunity to explore US census data from the year 2000 made available through the `openintro` package.
+
+Load the packages needed
+```{r}
+
+```
+
+See the documentation about the `census` data set with `?census`
+```{r}
+?census
+```
+
+How many observations and variables are in the data set?
+```{r}
+
+```
+
+## Explore the data set
+
+When working with new data, the first steps are to understand what is in the data set and assess how meaningful the data is. Explore individual variables and the relationship between variables to better understand the census data set.  
+
+The questions below are meant to get you started. Consider other questions that come to mind about this data. 
+
+
+Are males and females equally represented in our sample? 
+```{r}
+
+```
+
+Are all states represented in the data? Hint: `unique()` might help. 
+```{r}
+
+```
+
+What is the average and median age of people in our sample?
+```{r}
+
+```
+
+Explore the discrepancy between the average and median household income with the questions below:
+
+What is the average household income? Use the `mean()` function. Type `?mean` on the console to view the documentation about this function. 
+```{r}
+
+```
+
+
+What is the median family income?
+```{r}
+
+```
+
+What is the difference between the average and median family income?
+```{r}
+
+```
+
+Think of at least two more questions that you have about the other variables in the data set? Explore them.
+
+Your question 1:
+```{r}
+
+```
+
+Your question 2:
+```{r}
+
+```
+
+
+
+## Explore the data sets visually
+
+### Histogram with base function
+Histograms help us view the distribution of data. Use the `hist()` function (part of Base R, no need to download additional package).
+
+Histogram of family income with base function `hist()`
+```{r}
+
+
+```
+
+Note: If scientific notation is being used on the axis. You can prevent scientific notation when printing by running `options(scipen=999)` and revert is back with `options(scipen=0)`.
+
+
+### Visualizing data with ggplot2
+Load the ggplot2 package if necessary. It is good practice to load packages used the beginning of the program. 
+```{r}
+
+
+```
+
+
+#### Create a histogram with ggplot2
+Use the template below to create a histogram with ggplot2 function `ggplot()`. Replace the <> fields with your response. 
+
+Create a histogram to view the distribution of the total family income. 
+```{r}
+ggplot(<insert data>, aes( x= <insert variable name>)) +
+  geom_histogram( binwidth = <insert number>) #Try different numbers: 100 or 1000 or 10,000
+```
+
+  
+
+Notice the message produced. What do you think this means? 
+```{r}
+
+
+```
+
+
+Compare the graph produced with `hist()` to the graph produced with ggplot2's `geom_histogram()`. What are similarities? What are differences? 
+```{r}
+
+```
+
+
+Moving forward, we are focusing on visualizing data with the ggplot2 package. 
+
+
+### Customize the appearance of the ggplot2 histogram
+
+Copy your code from above. Inside the `geom_histogram()` function, add the `color="black"` and `fill="white"` options. Remember they need to be separated by a comma. 
+
+What happens when those options are used? Test out other colors as well. 
+
+```{r}
+
+
+```
+
+
+Similar to a histogram, kernel density plots help us understand the distribution of data over a continuous interval (instead of bins as used with histogram). They help to smooth out the shape of the distribution.  
+
+Complete the template below to create a density plot. Instead of `geom_histogram()` use `geom_density()`
+```{r}
+ggplot(census, aes( x= totalFamilyIncome)) +
+  geom_<geom type of graph>()
+```
+
+
+
+### Visualizing continuous data
+
+So far we explored the total family income. There is a variable measuring total personal income. Create a density plot to understand the distribution of the total personal income measure. How does it differ from the total family income distribution? How are they the same?
+
+```{r}
+
+```
+
+Copy your code from above. Add the `color` and `fill` options inside the `geom_density()` function. Similar to how we modified it with `geom_histogram()` in the exercise above. Try different colors. 
+
+```{r}
+
+
+```
+
+This time modify the options specified inside `aes()` from `aes( x= totalPersonalIncome)` to `aes( x= totalPersonalIncome, fill= sex)`. Remove any options inside the `geom_density()` function. 
+
+What is different about this graph compared to the previous one?
+
+```{r}
+
+```
+
+Copy your code from above and add the option `alpha= .3` inside  `geom_density()`. What happened? Was it helpful?
+
+```{r}
+
+```
+
+Store the previous plot to an object named `plotden.pinc.sex`
+```{r}
+plotden.pinc.sex <- <code from plot above here >
+```
+
+
+Now we are overlaying a line for the median total personal income on top of the density distributions. 
+
+Here we are creating a data frame to store the median income for males and females. Review the code and see if you can follow along. Feel free to play around with it. Can you create a data frame for the mean income? 
+```{r}
+# create two vectors for median income for males and females
+pincmedian.female <- median(census$totalPersonalIncome[census$sex == "Female"], na.rm = TRUE)
+pincmedian.male   <- median(census$totalPersonalIncome[census$sex == "Male"], na.rm = TRUE)
+
+# create two data frames to store median and sex
+pincmedian.female.df <- data.frame(median.pinc = pincmedian.female, sex = "Female")
+pincmedian.male.df   <- data.frame(median.pinc = pincmedian.male, sex = "Male")
+
+# combine data frames into one and print it
+(pincmedian.sex <- rbind(pincmedian.female.df, pincmedian.male.df ))
+
+# remove objects from the environment 
+rm( list = c("pincmedian.female", "pincmedian.male", "pincmedian.female.df", "pincmedian.male.df" ))
+
+```
+
+
+Add the your plot `plotden.pinc.sex` to the code below. 
+Did the legend change compared to the previous plot? How many lines where plotted and is that what you expected?
+```{r} 
+< your plot >  +
+  
+    geom_vline( data= pincmedian.sex, aes(xintercept = median.pinc, color= sex),
+              linetype= "dashed", size= 1)
+```
+
+
+Investigate the `plotden.pinc.sex` object we created. What do you see?
+```{r}
+
+```
+
+
+
+Change the x-axis  by adding  `+ coord_cartesian(xlim = c(0, <insert a number here>))` or  `+ scale_x_continuous(limits = c(0, <insert a number here>))`. Try one of them at a time and compare how the graphs produced differ. 
+```{r}
+
+  
+```
+
+Another useful way to visualize distributions is with a boxplot. Run the code below. How is this different and the same from the density plot above? 
+
+```{r}
+ggplot(census, aes(x = sex, y = totalPersonalIncome)) + geom_boxplot()
+```
+
+
+Take a look at the range of values for totalPersonalIncome. Does anything seem odd?
+```{r}
+
+
+```
+
+Is there any relationship between a age and personal income? Do older people tend to report more personal income (or vice versa)? Create a scatter plot for personal income by age (personal income on the y axis and age on the x axis). Refer to the ggplot2 cheat sheet [https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf] as a reference. 
+```{r}
+
+
+```
+
+
+We investigated the personal income data together. Choose at least one additional variable of interest and explore it's data. Refer to the Cheat sheets for some ideas and guidance for how to work with the data. 
+
+```{r}
+
+```
+
+
+Come prepare to the next session to share responses to these exercises. We will build off these exercises to learn more about data visualization and transforming data. 
+
