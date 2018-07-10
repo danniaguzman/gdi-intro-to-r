@@ -1,10 +1,10 @@
-<!doctype html>
+
 <html lang="en">
 
 	<head>
 		<meta charset="utf-8">
 
-		<title>GDI Introduction to R: Class 1</title>
+		<title>GDI Intro to R: Class 1</title>
 
 		<meta name="description" content="Girl Develop It Introduction to R class">
 		<meta name="author" content="Girl Develop It">
@@ -51,7 +51,7 @@
 		<!-- Opening -->
 				<section>
 					<img src="dist/img/circle-gdi-logo.png" alt="GDI Logo" class="noborder"/>
-					<h1>Introduction to R and RStudio</h1>
+					<h1>Intro to R</h1>
 					<h2>Class 1</h2>
 				</section>
 		<!-- Welcome-->
@@ -77,18 +77,18 @@
 						<li>Who are you?</li>
 						<li>What do you hope to get out of the class?</li>
 						<!-- Feel free to change the icebreaker question! -->
-						<li>What's your favorite ice cream flavor?</li>
+						<li>What food could you not live without??</li>
 					  </ul>
 					</div>
 				</section>
 				<!-- Class goals -->
 				<section>
 					<h2>Goals for this class</h2>
-					<span><img src="https://png.icons8.com/color/200/000000/iceberg.png">
+					<span><img src="https://png.icons8.com/color/100/000000/iceberg.png">
 					<p>Gain foundation to get started</p><span>
-					<img src="https://png.icons8.com/color/200/000000/technology-lifestyle.png">
+					<img src="https://png.icons8.com/color/100/000000/technology-lifestyle.png">
 					<p>Collaborate</p>
-					<img src="https://png.icons8.com/color/200/000000/clapperboard.png">
+					<img src="https://png.icons8.com/color/100/000000/clapperboard.png">
 					<p>Learn by doing</p>
 				</section>
 
@@ -133,7 +133,11 @@
 				<section>
 					<h2>What is R?</h2>
 					<p>"...used across industries.."</p>
-					<div class="left-align">
+					<div>
+
+						<img src="img/companies-using-r.png" alt="collage of company logos">
+						<p><small>Photo credit: <a href="https://www.listendata.com/2016/12/companies-using-r.html">Deepanshu Bhalia</a></small></p>
+<!--
 						<ul>
 							<li>Academia</li>
 							<li>Nonprofit organizations</li>
@@ -142,14 +146,13 @@
 							<li>Financial institutions</li>
 							<li>Others...</li>
 						</ul>
-						<img src="img/companies-using-r.png" alt="collage of company logos">
-						<p><small>Photo credit: <a href="https://www.listendata.com/2016/12/companies-using-r.html">Deepanshu Bhalia</a></small></p>
+-->
 					</div>
 				</section>
 				<section>
 					<h2>What is R?</h2>
 					<p>"...to work with data..."</p>
-					<div class="left-align">
+					<div >
 					<img src="img/data-science-explore.png">
 					<p><small>Photo credit: <a href="http://r4ds.had.co.nz/introduction.html">Wickham & Grolemund's R for Data Science</a></small></p>
 					</div>
@@ -162,9 +165,10 @@
 						<ul>
 						<li>Descriptive data analysis</li>
 							<ul>
-								<li>Distribution</li>
-								<li>Central tendency</li>
-								<li>More...</li>
+								<li>Central tendency:</li>
+								<p><small>Mean, median, mode </small></p>
+								<li>Variability</li>
+								<p><small>Standard deviation, variance, minimum, maximum, kurtosis, skewness </small></p>
 							</ul>
 							<br>
 						<li>Inferential data analysis</li>
@@ -179,8 +183,8 @@
 	<!-- R examples -->
 				<section>
 					<h2>What can I do with R?</h2>
-					<p>Static Data Vizualization</p>
-					<img src="img/bbc-gender-lifeexp.png" alt="graph comparing life expectency from BBC article">
+					<p>Static Data Visualization</p>
+					<img src="img/bbc-gender-lifeexp.png" alt="graph comparing life expectancy from BBC article">
 					<p><small>Photo credit: <a href="https://www.bbc.com/news/health-43726436">BBC</a></small></p>
 				</section>
 				<section>
@@ -191,19 +195,19 @@
 				</section>
 				<section>
 					<h2>What can I do with R?</h2>
-					<p>Static Data Vizualization</p>
+					<p>Static Data Visualization</p>
 					<img src="img/bbc-gender-pay-gap.png" alt="graph comparing gap in median hourly pay by gender">
 					<p><small>Photo credit: <a href="https://www.bbc.com/news/business-43668187">BBC</a></small></p>
 				</section>
 				<section>
 					<h2>What can I do with R?</h2>
-					<p>Interactive Data Vizualization</p>
+					<p>Interactive Data Visualization</p>
 					<img src="img/r-gallery-demo_ggplotly.gif" alt="Gif of interactive scatterplot using r and the ggplotly package">
 					<p><small>Source: <a href="https://www.r-graph-gallery.com/interactive-charts/">R Graph Gallery</a></small></p>
 				</section>
 				<section>
 					<h2>What can I do with R?</h2>
-					<p>Interactive Data Vizualization</p>
+					<p>Interactive Data Visualization</p>
 					<img src="img/r-gallery-chloropleth.png" alt="Screenshot of a chloropeth map made with r and the leaflet package">
 					<p><small>Source: <a href="https://www.r-graph-gallery.com/183-choropleth-map-with-leaflet/">R Graph Gallery</a></small></p>
 				</section>
@@ -237,9 +241,21 @@
 					</ul>
 				</section>
 				<section>
+					<h2>Open RStudio</h2>
+					<div >
+						<p>Log in to your RStudio Cloud account</p>
+						<a href="https://rstudio.cloud/">https://rstudio.cloud</a>
+						<br><br>
+						<p>Local alternative</p>
+						<p>Open local installation of RStudio on your laptop</p>
+					</div>
+				</section>
+				<section>
 					<h2>Try it</h2>
+					<p>R is like a powerful calculator!</p>
 					<br>
-					<p>What is 23.5% 0f $225?</p>
+					<p>What is 21.45% 0f $225?</p>
+					<p><small>Arithmetic operators: * + - / ** ^ </small></p>
 				</section>
 
 	<!--Data language -->
@@ -249,6 +265,9 @@
 				<section>
 					<h2>Data</h2>
 					<img src="img/ds-meet-friends.png">
+				</section>
+				<section>
+					<h2>How would you organize Brandon and Carla's data?</h2>
 				</section>
 				<section>
 					<h2>Data Frame</h2>
@@ -269,6 +288,27 @@
 				<section>
 					<h2>Data Type</h2>
 					<img src="img/ds-var-type.png">
+				</section>
+				<section>
+					<h2>Numeric Variables</h2>
+					<div>
+						<img src="img/apple-tape.jpg">
+						<p>Discrete vs. Continuous </p>
+					</div>
+				</section>
+				<section>
+					<h2>Categorical variables</h2>
+					<div>
+						<img src="img/colors.gif">
+						<p><small>Source: <a href="http://ww2.cfo.com/it-value/2011/03/spreadsheets-color-my-world-with-macros/">CFO</a></small></p>
+					</div>
+				</section>
+				<section>
+					<h2>Categorical variables</h2>
+					<div>
+						<img src="img/pain-scale.png">
+						<p><small>Source: <a href="http://trackmystack.com/articles/wp-content/uploads/2016/04/wong-baker-scale.png">Trackmystack.com</a></small></p>
+					</div>
 				</section>
 				<section>
 					<h2>Data Source</h2>
@@ -300,23 +340,19 @@
 					<br>
 					<h4>Generic syntax</h4>
 					<code>
-						c(element 1, element 2)
-					</code>
+						c(&ltelement 1&gt, &ltelement 2&gt)
+					</code><br><br>
 					<h4>Numeric vector</h4>
 					<code>
-						c(19,24)
-					</code>
-					<br>
-					<br>
+						c(19, 24)
+					</code><br><br>
 					<h4>Character vector</h4>
 					<code>
-						c('Brandon','Carla')
-					</code>
-					<br>
-					<br>
+						c('Brandon', 'Carla')
+					</code><br><br>
 					<h4>Logical vector</h4>
 					<code>
-						c(FALSE,TRUE)
+						c(FALSE, TRUE)
 					</code>
 				</section>
 				<section>
@@ -324,89 +360,161 @@
 					<br><br>
 					<h4>Generic syntax</h4>
 					<code>
-						object_name <- data
-					</code>
-					<br><br>
+						object.name <- &ltobject&gt
+					</code><br><br>
 					<h4>Assign a numeric vector to the variable age</h4>
 					<code>
 						age <- c(19, 24)
-					</code>
-					<br><br>
+					</code><br><br>
 					<h4>Assign a character vector to the variable name</h4>
 					<code>
 						name <- c('Brandon', 'Carla')
 					</code>
 				</section>
 				<section>
-					<h2>Stored object are added to the workspace</h2>
-					<p> XXX Insert image of global env.  here </p>
+					<h2>Syntactically correct variable names</h2>
+					<div>
+						<ul>
+							<li>letters</li>
+							<li>numbers</li>
+							<li>dot or underline characters</li>
+							<li>starts with a letter</li>
+							<li>starts with a dot not followed by a number (e.g. ".2way" is not valid)</li>
+							<li>reserved words are not valid</li>
+						</ul><br>
+						<p><small>Note: Rules for object possible names in R are <a href="https://www.r-bloggers.com/rules-for-naming-objects-in-r/"> flexible</a></small>.</p>
+					</div>
+				</section>
+				<section>
+					<h2>Create a Data Frame</h2>
+					<br>
+					<h4>Generic syntax</h4>
+					<code>
+						data.frame(&ltvector 1&gt, &ltvector 2&gt)
+					</code><br><br>
+					<h4>Data frame from new vectors</h4>
+					<code>
+						data.frame( c('Brandon', 'Carla'), c(19, 24))
+					</code><br><br>
+					<h4>Data frame from vectors in the workspace</h4>
+					<code>
+						data.frame( name, age)
+					</code><br><br>
+				</section>
+				<section>
+					<h2>Stored objects are added to the workspace</h2>
+					<div>
+						<p> Objects in the workspace (a.k.a. global environment) indicate objects stored in the current memory (RAM on your local computer for local installation)</p>
+						<br>
+						<p><small>R loads data and any object created to memory. Low memory space limits the data size which can be used.</small></p>
+					</div>
+				</section>
+				<section>
+					<h2>Vector arithmetic with operators</h2>
+					<div>
+						<p>How old will our friends be in 2045</p>
+						<br>
+						<h4>Create a numeric vector</h4>
+						<code>
+							age <- c(19, 24)
+						</code><br><br>
+						<h4>Add year difference to age vector</h4>
+						<code>
+							age + (2045 - 2018)
+						</code>
+					</div>
 				</section>
 				<section>
 					<h2>Manipulate objects with functions</h2>
 					<br>
 					<h4>Generic syntax</h4>
 					<code>
-						function( object_name )
+						function(&ltobject&gt)
 					</code>
 					<br>
 					<br>
 					<h4>Find the average age</h4>
 					<code>
 						mean(age)
-					</code>
+					</code><br><br>
+					<p><small> Functions often have optional arguments that can be specified and default options that can be changed</small></p>
 				</section>
 				<section>
-					<h2>Coerce objects to a different type</h2>
+					<h2>Objects have a class and other properties</h2>
+					<br>
+					<h4>Find the class of an object</h4>
+					<code>
+						class(&ltobject&gt)
+					</code>
+					<br><br>
+					<h4>View other properties about an object</h4>
+					<code class= "source">
+						attributes(&ltobject&gt)
+					</code><br><br>
+					<code class= "source">
+						str(&ltobject&gt)
+					</code><br><br>
+					<code class= "source">
+						length(&ltobject&gt)
+					</code><br><br>
+					<code class= "source">
+						dim(&ltobject&gt)
+					</code><br><br>
+					<p><small>Some properties may be NULL if they have never been set or are not relevant to the object</small></p>
+				</section>
+				<section>
+					<h2>Functions to check the type of vector</h2>
+					<div>
+						<code>
+							is.numeric(&ltvector&gt)
+						</code><br><br>
+						<code>
+							is.character(&ltvector&gt)
+						</code><br><br>
+						<code>
+							is.logical(&ltvector&gt)
+						</code><br><br>
+						<code>
+							is.factor(&ltvector&gt)
+						</code>
+					</div>
+				</section>
+				<section>
+					<h2>Convert objects to a different type</h2>
 					<br></br>
 					<h4>Generic syntax</h4>
-					<code>as.something( object)</code>
+					<code>as.something(object)</code>
 					<br><br>
-					<h4>Create a dataframe from existing vectors</h4>
-					<code>as.dataframe(name, age)</code>
-					<br>
-					<h4>Store a dataframe as the object mydf</h4>
+					<h4>Convert a numeric vector to a character vector</h4>
 					<code>
-						mydf <- as.dataframe(name, age)
-					</code>
-					<br><br>
-					<p>Other functions: as.numeric(), as.character(), as.factor()</p>
+						as.character(&ltvector&gt)
+					</code><br><br>
 				</section>
 				<section>
-					<h2>Try it</h2>
-					<p>What happens if you use the mean function on a numeric vector, character vector, and data frame?</p>
+					<h2>Functions are sensitive to object class</h2>
+					<br>
+					<p>Output may differ depending on the object class</p>
+					<br>
+					<p>Or the function may not work at all with some objects</p>
 				</section>
 				<section>
-					<h2>Objects have a type and other properties</h2>
-					<br>
-					<h4>Find the type of an object</h4>
-					<code>
-						class(object_name)
-					</code>
-					<br>
-					<h4>Find other properties of an object</h4>
-					<code class= "source">
-						attributes(object_name)
-					</code>
+					<h2>Activity 1</h2>
+					<div>
+						<ul>
+							<li>Go to the <a href="https://rstudio.cloud/spaces/2385/join?access_code=8BN6eAUuhvO%2FsX1RpTK%2B8M1udBowz%2FLdRaclRpF6">R Training</a> workspace on RStudio Cloud</li>
+							<p><small>Or get project from gitHub repo</small></p>
+							<li>Open the r-intro RStudio project</li><br>
+							<li>Navigate to the class-session-1.Rmd file</li><br>
+							<li>Work through the questions under the Activity 1 section</li>
+						</ul>
+					</div>
 				</section>
 				<section>
-					<h2>Functions are sensitive to class</h2>
-					<p>The output may differ depending on the object class</p>
-					<br>
-					<br>
-					<h4>Plot() function operating on a vector</h4>
-					<code>
-						plot(age)
-					</code>
-					<code>
-						plot(name)
-					</code>
-					<br>
-					<h4>Plot() function operating on a data frame</h4>
-					<code>
-						plot(mydf)
-					</code>
+					<h2>Why the emphasis on vectors?</h2>
+					<p>They are R's basic building block</p>
 				</section>
-	<!--Assing elements of objects -->
+
+	<!--Accessing elements of objects -->
 				<section>
 					<h2>Elements in an object can be accessed</h2>
 					<br>
@@ -415,9 +523,7 @@
 					<p><small>Source: <a href="https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf">Base R Cheat Sheet</a></small></p>
 				</section>
 				<section>
-					<h2>Try it</h2>
-					<br>
-					<p>What is the average age of the kids (younger than 18) in the sample</p>
+					<h2>Logical operators</h2>
 					<br>
 					<h4>Use logical operators to select desired elements</h4>
 					<img src="img/logical-operators.png">
@@ -431,65 +537,127 @@
 					<p><small>Source: <a href="https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf">Base R Cheat Sheet</a></small></p>
 				</section>
 				<section>
-					<h2>Try it</h2>
-					<br>
-					<p>Use the <code>table()</code> function to tally how many people in the sample prefer each season</p>
-				</section>
-
-
-
-				<section>SANDBOX.....</section>
-				<section>
-					<table style="border: 1px solid black; width: 100%">
-					<tr>
-						<th style="border: 1px solid black;"><p>name</p></th>
-						<th style="border: 1px solid black;">age</th>
-						<th style="border: 1px solid black;">height</th>
-						<th style="border: 1px solid black;">siblings</th>
-						<th>fruit</th>
-						<th>fruit freq</th>
-						<th>season</th>
-						<th>used r</th>
-					</tr>
-					<tr style="border: 1px solid black">
-						<td><Brandon</td>
-						<td>19</td>
-						<td>5.3</td>
-						<td>3</td>
-						<td><code>strawberries</code></td>
-						<td>often</td>
-						<td>winter</td>
-						<td>False</td>
-					</tr>
-					<tr>
-						<td>Carla</td>
-						<td>24</td>
-						<td>6.9</td>
-						<td>0</td>
-						<td><code>kiwi</code></td>
-						<td>not often</td>
-						<td>summer</td>
-						<td>True</td>
-					</tr>
-				</table>
-				</section>
-				<section>
-					<h2>What can I do with R?</h2>
-					<div class="left-align">
-						<p></p>
+					<h2>Activity 2</h2>
+					<div>
 						<ul>
-							<li>Statistical analysis </li>
-							<li>Data visualization</li>
-							<p><small>Photo credit: <a href="#" target="_blank">icon8 </a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
+							<li>Go to the <a href="https://rstudio.cloud/spaces/2385/join?access_code=8BN6eAUuhvO%2FsX1RpTK%2B8M1udBowz%2FLdRaclRpF6">R Training</a> workspace on RStudio Cloud</li>
+							<p><small>Or get project from gitHub repo</small></p>
+							<li>Open the r-intro RStudio project</li><br>
+							<li>Navigate to the class-session-1.Rmd file</li><br>
+							<li>Work through the questions under the Activity 2 section</li>
+						</ul>
+					</div>
+				</section>
+
+	<!--Packages -->
+				<section>
+					<h2>Extending the capabilities of R</h2>
+				</section>
+				<section>
+					<h2>Packages</h2>
+					<div>
+						<p>Free libraries of functions created by R users</p>
+						<a href="https://www.rdocumentation.org"><iframe src="https://www.rdocumentation.org/" width="800" height="400"></iframe></a>
+					</div>
+				</section>
+				<section>
+					<h2>Install Once, Load Every Session</h2>
+					<div>
+						<h4>Install a package</h4>
+						<code>
+							install.packages("&ltpackage name&gt")
+						</code><br><br>
+						<h4>Load a package</h4>
+						<code>
+							library(&quot&ltpackage name&gt&quot)
+						</code>
+					</div>
+				</section>
+				<section>
+					<h2>Recommended Packages</h2>
+					<div>
+						<p><a href="https://www.tidyverse.org/">Tidyverse</a></p>
+						<a href="https://www.tidyverse.org/"><iframe src="https://www.tidyverse.org/" width="800" height="400"></iframe></a>
+						<br><br>
+						<p><a href="https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages"> Others...</a></p>
+					</div>
+				</section>
+				<section>
+					<h2>Activity 3</h2>
+					<div>
+						<ul>
+							<li>Go to the <a href="https://rstudio.cloud/spaces/2385/join?access_code=8BN6eAUuhvO%2FsX1RpTK%2B8M1udBowz%2FLdRaclRpF6">R Training</a> workspace on RStudio Cloud</li>
+							<p><small>Or get project from gitHub repo</small></p>
+							<li>Open the r-intro RStudio project</li><br>
+							<li>Navigate to the class-session-1.Rmd file</li><br>
+							<li>Work through the questions under the Activity 3 section</li>
 						</ul>
 					</div>
 				</section>
 				<section>
+					<h2>Visualizing data with ggplot2</h2>
+					<p>5 minute crash course</p>
+					<div>
+					</div>
+				</section>
+				<section>
+					<h2>Grammar of Graphics</h2>
+					<div>
+						<img src="img/grammar-graphics-summary.png">
+						<p><small><a href="https://towardsdatascience.com/murdering-a-legendary-data-story-what-can-we-learn-from-a-grammar-of-graphics-ad6ca42f5e30">Source: Towards Data Science</a></small></p>
+					</div>
+				</section>
+				<section>
+					<h2>Graphs with ggplot2</h2>
+					<p>The 3 essential layers</p>
+					<div>
+						<img src="img/grammar-graphics-layer123.png">
+						<p><small><a href="https://towardsdatascience.com/murdering-a-legendary-data-story-what-can-we-learn-from-a-grammar-of-graphics-ad6ca42f5e30">Source: Towards Data Science</a></small></p>
+					</div>
+				</section>
+				<section>
+					<h2>Graphs with ggplot2</h2>
+					<p>The 3 essential layers</p><br>
+					<div>
+						<code>
+							ggplot( data = < DATA >) + </code><br><br>
+						<code>< GEOM_FUNCTION >( mapping = aes( < MAPPINGS >))
+						</code><br><br>
+						<p><small><a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">ggplot2 Cheat Sheet</a></small></p>
+					</div>
+				</section>
+				<section>
+					<h2>Activity 4</h2>
+					<div>
+						<ul>
+							<li>Go to the <a href="https://rstudio.cloud/spaces/2385/join?access_code=8BN6eAUuhvO%2FsX1RpTK%2B8M1udBowz%2FLdRaclRpF6">R Training</a> workspace on RStudio Cloud</li>
+							<p><small>Or get project from gitHub repo</small></p>
+							<li>Open the r-intro RStudio project</li><br>
+							<li>Navigate to the class-session-1.Rmd file</li><br>
+							<li>Work through the questions under the Activity 4 section</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Homework</h2>
+					<p>Opportunity to work with census data and practice key ideas from session 1</p><br>
+					<div>
+						<ul>
+							<li>Open the homework.Rmd file</li>
+							<li>Follow prompts and have fun with R</li>
+							<li>Come prepared to discuss for next session</li>
+						</ul>
+					</div>
+				</section>
+
+<!-- Adding resources to Class 2
+				<section>
 					<h2>Resources</h2>
 					<div class="left-align">
-						<h4>Free online moocs</h4>
+						<h4>Online classes</h4>
 						<ul>
-							<li><a href="https://www.udacity.com/course/data-analysis-with-r--ud651">Data Analysis with R by Facebook</a></li>
+							<li><a href="https://www.udacity.com/course/data-analysis-with-r--ud651">Data Analysis with R by Facebook</a></li><br>
+							<li></li>
 						</ul>
 					</div>
 				</section>
@@ -498,20 +666,17 @@
 					<div class="left-align">
 						<h4>Short and free tutorial</h4>
 						<ul>
-							<li><a href="https://www.listendata.com/p/r-programming-tutorials.html">Listen Data's 100 Free Tutorials For Learning R</a></li>
-							<li><a href="https://www.r-graph-gallery.com/interactive-charts/">The R Graph Gallery</a></li>
+							<li><a href="https://www.listendata.com/p/r-programming-tutorials.html">Listen Data's 100 Free Tutorials For Learning R</a></li><br>
+							<li><a href="https://www.r-graph-gallery.com/interactive-charts/">The R Graph Gallery</a></li><br>
+							<li><a href="https://www.r-exercises.com/start-here-to-learn-r/">R-exercises</a></li>
 						</ul>
 					</div>
 				</section>
-
-
-
-
-
+--->
 			</div>
 		<footer>
 		<div class="copyright">
-		  Introduction to R -- NYC Chapter --
+		  Intro to R -- NYC Chapter --
 		  <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
 		</div>
 	  </footer>
