@@ -1,0 +1,446 @@
+---
+title: "Creating and Working with Basic R Data Structures: Vector & Data Frame"
+output: html_notebook
+---
+## **Activity 1**
+## Vectors
+
+### Create variables
+Store the vector `1, 2, 3, 4, 5, 4, 3, 2, 0` as variable `x`
+
+```{r}
+
+```
+
+View the vector
+```{r}
+
+```
+
+### Compare values in a vector
+What is the value of `x > 3`
+```{r}
+
+```
+
+
+### Vector operations
+Create and store these vectors:
+
+`seq(1, 10 by = 2)` as variable `a`
+
+`10` as variable `b`
+
+`10, 100, 1000` as variable `c`
+
+Vector `a`
+```{r}
+
+```
+
+
+Vector `b`
+**TIP: ( b <- object ) make <- not print invisibly so you can see the value being assigned automatically without needing to type the object name after assigning it**
+```{r}
+
+```
+
+
+Vector `c`
+```{r}
+
+```
+
+What is the value of `a + b`?
+```{r}
+
+```
+
+What is the value of `a + c`?
+```{r}
+
+```
+
+## Object class and other properties
+Create and store three vectors:
+
+`'Brandon', 'Carla', 'Kevin', 'Taylor', 'Steven', 'Riley'` as `name`
+
+`22, 25, 18, 38, 12, 20` as `age`
+
+`5.5, 6.1, 4.9, 6.6, 4.3, 5.5` as `height`
+
+`'M', 'F', 'M', 'X', 'M', 'X'` as `gender`
+
+```{r}
+
+```
+
+
+### Class
+What is the object class for `name` and `age`?
+```{r}
+
+```
+
+
+### Structure
+Display the internal structure for `height` and `gender`?
+```{r}
+
+```
+
+
+### Dimension
+use `length()` to check the length of the `name` vector.
+```{r}
+length(name)
+```
+
+
+
+### Check data types
+What is the value of `is.numeric(name)`?
+```{r}
+is.numeric(name)
+```
+
+
+What is the value of `is.character(name)`?
+```{r}
+is.character(name)
+```
+
+
+What is the value of `is.vector(name)`?
+```{r}
+is.vector(name)
+```
+
+
+What is the value of `is.data.frame(name)`?
+```{r}
+is.data.frame(name)
+```
+
+
+
+### Explicit and implicit object conversion
+
+Use 'as.character()` to convert the numeric vector `age` to a character vector explicitly and store it as `age.char`
+```{r}
+
+```
+
+
+
+How many friends are older than 21?
+
+Using the numeric `age` vector
+```{r}
+
+```
+
+Using the character `age.char` vector
+```{r}
+
+```
+
+Using a non-sensical vector for comparison such as `name`
+```{r}
+
+```
+
+
+
+
+
+ 
+## **Activity 2**
+### Accessing the elements in a vector
+
+What is the name of the third person included in the `name` vector?
+Hint: Use `name[<insert-index-here>]`
+```{r}
+
+```
+
+What are the names of the 2nd, 3rd, 4th, and 5th person on the names vector?
+
+Use the `name` vector and specify which index to KEEP so that only the 2nd, 3rd, 4th, and 5th person are printed
+```{r}
+
+```
+
+Use the `name` vector and specify which index to EXCLUDE so that only the 2nd, 3rd, 4th, and 5th person are printed
+```{r}
+
+```
+
+
+## **Data Frames**
+
+### Create a data frame from vectors
+Create a data frame from the `name, age, height, gender` vectors as `friends`
+```{r}
+
+```
+
+
+## Cleaning the workspace
+The `name, age, height, gender` vectors are redundant now that there  is a `friends` data frame. Remove these vectors from the workspace with `rm(<object>)`.
+
+
+```{r}
+
+```
+
+
+Check what other objects are in the workspace with `ls()`. 
+```{r}
+
+```
+
+Moving forward you only need the friends data frame. Remove all other objects. 
+```{r}
+
+```
+
+
+### Overview of data frame
+
+#### Use base R functions
+Use `summary()` to learn more about the data frame
+```{r}
+
+```
+
+
+Use `str()` to learn more about the data frame
+```{r}
+
+
+```
+
+View the variables in a data frame with `names()`
+```{r}
+
+```
+
+
+### View observations 
+View the first observation in the data frame with `head(<data frame>, 1)`
+```{r}
+
+```
+
+View the last observation in the data frame with `tail(<data frame>, 1)`
+```{r}
+
+```
+
+## Object class and other properties
+
+### Dimension
+
+How does value of `length(friends)` compared to  `dim(friends)` ?
+
+`length()` value for friends data frame
+```{r}
+
+
+```
+
+`dim()` value for friends data frame
+```{r}
+
+
+```
+
+What is the value of `nrow(friends)`?
+```{r}
+
+
+```
+
+What is the value of `ncol(friends)`?
+```{r}
+
+```
+
+
+### Check data types
+What is the value of `is.numeric(friends)`?
+```{r}
+
+```
+
+What is the value of `is.character(friends)`?
+```{r}
+
+```
+
+What is the value of `is.vector(friends)`?
+```{r}
+
+```
+
+What is the value of `is.data.frame(friends)`?
+```{r}
+
+```
+
+
+
+## Accessing the vectors in a data frame
+
+How many friends are older than 21?
+```{r}
+
+```
+
+Use the logical operators along with `table()` to count how many people are older than 21
+```{r}
+
+```
+
+
+Create a crosstab of friends older than 21 by gender using `table(<gender vector>,<logical vector for age older than 21>)`
+```{r}
+
+
+```
+
+
+
+What output is produced by `plot(<age>)
+```{r}
+
+```
+
+
+
+What output is produced by `plot(<gender vector>)`?
+```{r}
+
+```
+
+
+What output is produced by `plot(<name vector>)`?
+```{r}
+
+```
+
+
+What is the output of `plot(<age vector>,<height vector>)?
+```{r}
+
+```
+
+Create a boxplot of height with `boxplot()` to view the distribution
+```{r}
+
+```
+
+
+
+
+## **Activity 3**
+
+#### Use package functions
+Use the function `glimpse()` provided by the `dplyr` package to learn more about the data frame friends.
+
+Install the dplyr package if it's not already installed (`install.packages("dplyr")`) and load the package `library("dplyr")`. 
+
+```{r}
+
+```
+
+
+
+When a package is loaded all of its functions are loaded to the current memory. Suppose you want to use  `describe()` once and otherwise do not need other functions from the Hmisc package. One alternative is to access that function without loading the package. That can be done by specifying `packagename::functionname()`. (Note: Package installation is still needed)
+
+Use the `describe()`function without loading the `Hmisc` package
+```{r}
+
+```
+
+> **How does the overview of the friends data frame differ when using different functions: summary(), str(), glimpse(),describe()?**
+
+> **How does the output differ for character and numeric vectors?**
+
+> **Why might we want to refer to a package function explicity (e.g.`Hmisc::describe()` versus implicitly (e.g. loading with `library("Hmisc")` and then calling function `describe())?**
+
+Hint: What messages did R print in the console after loading the package `dplyr`? What happens if you load the Hmisc package now after having loaded the dplyr package earlier?
+
+
+### A different way to clean the workspace - Demo
+Earlier we used `ls()` to check the objects in the workspace and used `rm()` to remove any object in the workspace that was not our `friends` data frame. 
+
+Recreate the objects since we removed them earlier
+```{r}
+a <- seq(1, 10, by = 2)
+b <- c(10)
+c <- c(10, 100, 1000)
+x <-  c(1, 2, 3, 4, 5, 4, 3, 2, 0)
+```
+
+Use `ls()` to view the objects in the workspace
+```{r}
+ls()
+```
+
+What is the class of the value generated by `ls()`
+```{r}
+class(ls())
+```
+
+Use an index to select only the `"friends"` value from the output returned by ls()
+```{r}
+ls()[4]
+```
+
+Return a logical vector indicating TRUE for any element from `ls()` that is not "friends" and FALSE if it is friends. Store the logical vector as `isnot.friends`.
+```{r}
+isnot.friends <- NULL # Place holder. Add name to workspace without any value.
+( isnot.friends <- ls() != "friends" ) 
+```
+
+
+Use `ls()` and `isnot.friends` to select the elements from `ls()` that are not friends. We want a character vector that excludes the 'friends' value. 
+```{r}
+ls()[isnot.friends]
+```
+
+Use `isnot.friends`, `ls()`, and `rm()` to remove any object in the workspace that is not `friends`. 
+```{r}
+rm(list = ls()[isnot.friends])
+```
+
+
+
+
+## **Activity 4**
+
+## Visualizing data with the ggplot2 package
+Install and load the ggplot2 package
+```{r}
+
+```
+
+Create a scatterplot of age by height with `ggplot()`. Refer to the ggplot2 cheat sheet (https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf).
+Hint: See `geom_point()`
+```{r}
+
+```
+
+Create a line graph of age by height
+```{r}
+
+```
+
+Create a boxplot of the variable `height`
+```{r}
+
+```
+
